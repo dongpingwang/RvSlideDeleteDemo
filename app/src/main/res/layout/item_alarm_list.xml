@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/ccui_dp_60"
+    android:layout_marginBottom="@dimen/ccui_dp_16"
+    android:background="@drawable/bg_highlight">
+
+    <TextView
+        android:id="@+id/btn_delete"
+        android:layout_width="@dimen/ccui_dp_90"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@drawable/bg_delete"
+        android:gravity="center"
+        android:text="删除"
+        android:textColor="@color/normal_color"
+        android:textSize="@dimen/font_normal_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_alarm_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ccui_dp_20"
+            android:layout_marginTop="@dimen/ccui_dp_10"
+            android:layout_marginEnd="@dimen/ccui_dp_18"
+            android:layout_toStartOf="@id/iw_alarm_enabler"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/normal_color"
+            android:textSize="@dimen/font_normal_size"
+            tools:text="多喝热水" />
+
+        <TextView
+            android:id="@+id/tv_alarm_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_alarm_name"
+            android:layout_marginStart="@dimen/ccui_dp_20"
+            android:layout_marginEnd="@dimen/ccui_dp_18"
+            android:layout_toStartOf="@id/iw_alarm_enabler"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/dim50_color"
+            android:textSize="@dimen/ccui_sp_14"
+            tools:text="多喝热水" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/iw_alarm_enabler"
+            android:layout_width="@dimen/ccui_dp_56"
+            android:layout_height="@dimen/ccui_dp_32"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/ccui_dp_20"
+            android:background="@drawable/selector_switch_bg"
+            android:checked="true"
+            android:thumb="@null"
+            android:track="@null"
+            app:splitTrack="true" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
